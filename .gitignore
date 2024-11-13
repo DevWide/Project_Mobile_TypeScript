@@ -1,0 +1,16 @@
+# Node and pnpm
+node_modules/
+dist/
+pnpm-lock.yaml
+
+# Playwright
+test-results/
+playwright-report/
+screenshots/
+
+# VS Code settings
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db

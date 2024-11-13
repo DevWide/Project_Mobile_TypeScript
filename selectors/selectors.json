@@ -1,0 +1,10 @@
+{
+    "home": {
+        "menuButton": "#comp-kbgakxea_r_comp-kkmqi5lg > div > svg",
+        "menuOptionServices": "text=Serviços",
+        "aboutUsButton": "#comp-kbgakxmn_r_comp-llf37n61 > ul > li:nth-child(2) > div > span > a"
+    },
+    "aboutUs": {
+        "backButton": "#comp-llj36qds_r_comp-llj2yzo6 > div > svg"
+    }
+}
