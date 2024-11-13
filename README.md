@@ -18,18 +18,22 @@ This project automates mobile web testing for [Barosa](https://www.barosa.co/) u
 
 1. Clone this repository.
 2. Install dependencies:
-   ```bash
-   pnpm install
+````
+pnpm install
+````
 
 3. Install Playwright browsers:
-    ```bash
-  pnpm playwright install
+````
+pnpm playwright install
+````
 
 ## Running Tests
 
 To run the tests in mobile view interactively with screenshots, use the following command:
-    ```bash
-    pnpm playwright test --headed --project="Mobile Safari"
+````
+pnpm playwright test --headed --project="Mobile Safari"
+````
+
 
 ## Project Configuration
 * **playwright.config.ts:** Configuration file for Playwright, with device emulation and project settings.
