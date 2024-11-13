@@ -1,4 +1,4 @@
-name: Playwright Tests to Puzzle Tech Project
+name: Playwright Tests to Puzzle Tech Project QA
 
 on:
   push:
@@ -15,7 +15,6 @@ jobs:
     strategy:
       matrix:
         browser: [webkit] 
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -24,10 +23,11 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '16'
-          cache: 'pnpm'
 
       - name: Install pnpm
-        run: npm install -g pnpm
+        run: |
+          curl -fsSL https://get.pnpm.io/install.sh | sh - 
+          export PATH="~/.local/share/pnpm:$PATH"
 
       - name: Install dependencies
         run: pnpm install
@@ -37,3 +37,4 @@ jobs:
 
       - name: Run Playwright tests
         run: pnpm playwright test --project="Mobile Safari"
+
