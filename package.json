@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "pnpm playwright test",                     
+    "test:mobile-safari": "pnpm playwright test --project='Mobile Safari'",  
+    "test:headed": "pnpm playwright test --headed --project='Mobile Safari'", 
+    "install:playwright": "pnpm playwright install --with-deps", 
+    "start": "pnpm test:mobile-safari"
   },
   "keywords": [],
   "author": "",

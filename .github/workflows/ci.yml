@@ -29,8 +29,11 @@ jobs:
         env:
           SHELL: "/bin/bash"  
         run: |
-          curl -fsSL https://get.pnpm.io/install.sh | sh - 
-          export PATH="~/.local/share/pnpm:$PATH"
+          curl -fsSL https://get.pnpm.io/install.sh | sh -
+          export PNPM_HOME="/home/runner/.local/share/pnpm"
+          export PATH="$PNPM_HOME:$PATH"
+          echo "PNPM_HOME=$PNPM_HOME" >> $GITHUB_ENV
+          echo "PATH=$PNPM_HOME:$PATH" >> $GITHUB_ENV
 
       - name: Install dependencies
         run: pnpm install
