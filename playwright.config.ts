@@ -6,8 +6,7 @@ export default defineConfig({
   use: {
     baseURL: 'https://www.barosa.co',
     trace: 'on-first-retry',
-    headless: false,
-    slowMo: 500, 
+    headless: process.env.CI ? true : false, 
   },
   projects: [
     {
@@ -15,7 +14,6 @@ export default defineConfig({
       use: {
         ...devices['iPhone 12'],
         browserName: 'webkit',
-        slowMo: 500 
       },
     },
     {
@@ -23,9 +21,9 @@ export default defineConfig({
       use: {
         ...devices['Pixel 5'],
         browserName: 'chromium',
-        slowMo: 500 
       },
     },
   ],
 });
+
 

@@ -14,7 +14,7 @@ jobs:
 
     strategy:
       matrix:
-        browser: [webkit] 
+        browser: [webkit] # WebKit is used for "Mobile Safari" tests
 
     steps:
       - name: Checkout code
@@ -27,7 +27,7 @@ jobs:
 
       - name: Install pnpm
         env:
-          SHELL: "/bin/bash"  
+          SHELL: "/bin/bash"  # Define explicitly the shell
         run: |
           curl -fsSL https://get.pnpm.io/install.sh | sh -
           export PNPM_HOME="/home/runner/.local/share/pnpm"
@@ -42,4 +42,5 @@ jobs:
         run: pnpm playwright install --with-deps
 
       - name: Run Playwright tests
-        run: pnpm playwright test --project="Mobile Safari"
+        run: pnpm playwright test --project="Mobile Safari"  
+
